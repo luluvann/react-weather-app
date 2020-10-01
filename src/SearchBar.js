@@ -19,7 +19,7 @@ export class SearchBar extends React.Component {
   }
 
   handleSubmit() {
-    this.props.getWeather(this.state.city);
+    this.props.onSearchStarted(this.state.city);
   }
 
   render() {
