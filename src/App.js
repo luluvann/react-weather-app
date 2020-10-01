@@ -1,24 +1,23 @@
-import React from 'react';
-import './App.css';
-import OWM from "./OWM"
+import React from "react";
+import "./App.css";
+import OWM from "./OWM";
 
 import { WeatherData } from "./WeatherData";
-import { SearchBar } from "./SearchBar"
+import { SearchBar } from "./SearchBar";
 
 const apiKey = "d8d349d845326a05731f3af54ad5e65e";
-const unit = "metric"
-const lang = "eng"
+const unit = "metric";
+const lang = "eng";
 
 class App extends React.Component {
-  constructor(){
+  constructor() {
     super();
-    this.state = {weatherData:undefined}
-      
-    this.getWeather();
+    this.state = { weatherData: undefined };
 
+    this.getWeather();
   }
 
-  convertTimeStamp(ts){
+  convertTimeStamp(ts) {
     // convert unix timestamp to milliseconds
     let ts_ms = ts * 1000;
 
@@ -40,42 +39,37 @@ class App extends React.Component {
     // minutes as 2 digits (mm)
     let minutes = ("0" + date_ob.getMinutes()).slice(-2);
 
-    return (hours+":"+minutes)
-
+    return hours + ":" + minutes;
   }
 
-  currentTime(){
-      let today = new Date();
-      let hours = ("0" + today.getHours()).slice(-2)
-      let minutes = ("0" + today.getMinutes()).slice(-2);
-    return (today.toDateString()+" "+hours+":"+minutes)
-
+  currentTime() {
+    let today = new Date();
+    let hours = ("0" + today.getHours()).slice(-2);
+    let minutes = ("0" + today.getMinutes()).slice(-2);
+    return today.toDateString() + " " + hours + ":" + minutes;
   }
 
-  upperCaseFirstLetter(string){
+  upperCaseFirstLetter(string) {
     let str = string;
-    let strFirstLetter = str.slice(0,1).toUpperCase();
+    let strFirstLetter = str.slice(0, 1).toUpperCase();
     let strLength = str.length;
-    let restOfStr = str.slice(1,strLength+1);
+    let restOfStr = str.slice(1, strLength + 1);
 
-    return (strFirstLetter + restOfStr)
+    return strFirstLetter + restOfStr;
   }
 
-
-  getWeather(city,units){
-    if (city == null || units == null){
+  getWeather(city, units) {
+    if (city == null || units == null) {
       return;
     }
-    OWM.search(city,units)
-      .then(promiseWeatherData => {
-        this.setState({
-          weatherData: promiseWeatherData,
-        })
+    OWM.search(city, units).then((promiseWeatherData) => {
+      this.setState({
+        weatherData: promiseWeatherData,
       });
+    });
   }
 
-  
-    /*getWeather(cityName){
+  /*getWeather(cityName){
     const api_call = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${unit}&lang=${lang}`)
     const response = api_call.json();
 
@@ -104,21 +98,15 @@ class App extends React.Component {
 
       )
     }*/
-    
-  
 
-
-  render(){
+  render() {
     return (
-        <div>
-        <SearchBar />  
-        <WeatherData weatherData={this.state.weatherData}/>
-        </div>
-  
-    )
-
+      <div>
+        <SearchBar />
+        <WeatherData weatherData={this.state.weatherData} />
+      </div>
+    );
   }
-
 }
 
 export default App;
