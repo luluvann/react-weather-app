@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## About
 
 As a developer-to-be and with basic knowledge of Python, HTML, CSS and Javascript, I decided to go on a 2-month journey this summer learning React library on Udemy, Codecademy and online tutorials.
