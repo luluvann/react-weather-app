@@ -8,7 +8,7 @@ export class WindDirection extends React.Component {
   render() {
     let windDeg = this.props.weatherData.winddeg;
 
-    if (windDeg == 0) {
+    if (windDeg === 0) {
       return <div>from S to N</div>;
     } else if (windDeg <= 45) {
       return <div>from SW to NE</div>;

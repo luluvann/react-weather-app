@@ -1,0 +1,33 @@
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+ 
+}
+
+
+button {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    border-radius: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: rgb(223, 233, 236);
+    margin-bottom: 20px;
+  }
+button:hover{
+    background-color: rgb(211, 218, 218);
+}

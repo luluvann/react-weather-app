@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./SearchBar.css"
+
 export class SearchBar extends React.Component {
   constructor(props) {
     super(props);
@@ -27,11 +29,12 @@ export class SearchBar extends React.Component {
       <div>
         <input
           type="text"
-          placeholder="City"
+          placeholder="Search for city..."
           onChange={this.handleCityChange}
+          className="no-outline"
         />
         <button type="submit" onClick={this.handleSubmit}>
-          Get weather
+          Search
         </button>
       </div>
     );

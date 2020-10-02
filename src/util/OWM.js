@@ -9,29 +9,17 @@ const upperCaseFirstLetter = (string) => {
   return strFirstLetter + restOfStr;
 };
 
-const convertTimeStamp = (ts) => {
+const convertTimeStamp = (ts,timezone) => {
   // convert unix timestamp to milliseconds
-  let ts_ms = ts * 1000;
+  let ts_ms = (ts + timezone )* 1000 ;
 
   // initialize new Date object
   let date_ob = new Date(ts_ms);
 
-  // year as 4 digits (YYYY)
-  let year = date_ob.getFullYear();
+  let utcString = date_ob.toUTCString(); 
+  let time = utcString.slice(-12, -7); 
 
-  // month as 2 digits (MM)
-  let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
-
-  // date as 2 digits (DD)
-  let date = ("0" + date_ob.getDate()).slice(-2);
-
-  // hours as 2 digits (hh)
-  let hours = ("0" + date_ob.getHours()).slice(-2);
-
-  // minutes as 2 digits (mm)
-  let minutes = ("0" + date_ob.getMinutes()).slice(-2);
-
-  return hours + ":" + minutes;
+  return time;
 };
 
 const currentTime = () => {
@@ -64,8 +52,8 @@ const OWM = {
           tempmin: Math.round(data.main.temp_min),
           tempmax: Math.round(data.main.temp_max),
           humidity: data.main.humidity,
-          sunrise: convertTimeStamp(data.sys.sunrise),
-          sunset: convertTimeStamp(data.sys.sunset),
+          sunrise: convertTimeStamp(data.sys.sunrise,data.timezone),
+          sunset: convertTimeStamp(data.sys.sunset,data.timezone),
           cloudiness: data.clouds.all,
           iconSource:
             "http://openweathermap.org/img/wn/" +

@@ -1,6 +1,7 @@
-/*https://techsini.com/list-of-the-best-animated-icon-packs-for-your-web-project/
-Josh Bader
-https://codepen.io/joshbader/pen/EjXgqr*/
+/* Amazing CSS weather animated icons credit to Josh Bader and Based on dribbble shot https://dribbble.com/shots/2097042-Widget-Weather by kylor
+https://techsini.com/list-of-the-best-animated-icon-packs-for-your-web-project/
+https://codepen.io/joshbader/pen/EjXgqr
+*/
 
 .icon {
   position: relative;
@@ -41,9 +42,9 @@ https://codepen.io/joshbader/pen/EjXgqr*/
   box-shadow: -2.1875em 0.6875em 0 -0.6875em #fff,
     2.0625em 0.9375em 0 -0.9375em #fff, 0 0 0 0.375em #fff,
     -2.1875em 0.6875em 0 -0.3125em #fff, 2.0625em 0.9375em 0 -0.5625em #fff;
-  opacity: 0.3;
+  opacity: 0.5;
   transform: scale(0.5) translate(6em, -3em);
-  animation: cloud 4s linear infinite;
+  animation: cloud 3s linear infinite;
 }
 .cloud:nth-child(2):after {
   background: #fff;
@@ -221,14 +222,14 @@ https://codepen.io/joshbader/pen/EjXgqr*/
 
 @keyframes cloud {
   0% {
-    opacity: 1;
+    opacity: 0.2;
   }
   50% {
     opacity: 0.3;
   }
   100% {
-    opacity: 1;
-    transform: scale(0.5) translate(-200%, -3em);
+    opacity: 0.5;
+    transform: scale(0.6) translate(-100%, -4em);
   }
 }
 

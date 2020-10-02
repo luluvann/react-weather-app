@@ -1,20 +1,20 @@
 import React from "react";
-import "./App.css";
-import OWM from "./OWM";
+import OWM from "./util/OWM";
 
-import { WeatherData } from "./WeatherData";
-import { SearchBar } from "./SearchBar";
+import "./App.css"
 
-const apiKey = "d8d349d845326a05731f3af54ad5e65e";
-const unit = "metric";
-const lang = "eng";
+import { WeatherData } from "./Components/WeatherData";
+import { SearchBar } from "./Components/SearchBar";
+import { Footer } from "./Components/Footer";
+
 
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { weatherData: undefined };
+    this.state = { weatherData: undefined};
     this.startSearch = this.startSearch.bind(this);
     this.getWeather = this.getWeather.bind(this);
+    this.startSearch("Montreal")
   }
 
   startSearch(cityName) {
@@ -37,6 +37,7 @@ class App extends React.Component {
       <div>
         <SearchBar onSearchStarted={this.startSearch} />
         <WeatherData weatherData={this.state.weatherData} />
+        <Footer />
       </div>
     );
   }
