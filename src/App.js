@@ -1,8 +1,6 @@
 import React from "react";
 import OWM from "./util/OWM";
 
-import "./App.css"
-
 import { WeatherData } from "./Components/WeatherData";
 import { SearchBar } from "./Components/SearchBar";
 import { Footer } from "./Components/Footer";
