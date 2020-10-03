@@ -12,6 +12,7 @@ export class SearchBar extends React.Component {
     };
     this.handleCityChange = this.handleCityChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.keyPressed=this.keyPressed.bind(this);
   }
 
   handleCityChange(event) {
@@ -24,6 +25,12 @@ export class SearchBar extends React.Component {
     this.props.onSearchStarted(this.state.city);
   }
 
+  keyPressed(event) {
+    if (event.key === "Enter") {
+      this.handleSubmit()
+    }
+  }
+
   render() {
     return (
       <div>
@@ -31,6 +38,7 @@ export class SearchBar extends React.Component {
           type="text"
           placeholder="Search for city..."
           onChange={this.handleCityChange}
+          onKeyPress={this.keyPressed}
           className="no-outline"
         />
         <button type="submit" onClick={this.handleSubmit}>
