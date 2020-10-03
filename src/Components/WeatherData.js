@@ -31,8 +31,15 @@ export class WeatherData extends React.Component {
     } else {
       return Math.round((temp+32)*1.8);
     }
+  }
 
-
+  handleConversionRealFeel(){
+    let tempRF = this.props.weatherData.feelslike;
+    if (this.state.celsius){
+      return tempRF;
+    } else {
+      return Math.round((tempRF+32)*1.8);
+    }
   }
 
   render() {
@@ -61,8 +68,7 @@ export class WeatherData extends React.Component {
                
               </h1>
               <h5>
-                <span>feels like: {weatherData.feelslike}<span>{this.state.tempUnit}</span></span>
-                
+                <span>feels like: {this.handleConversionRealFeel()}<span>{this.state.tempUnit}</span></span>
               </h5>
             </div>
           </div>
@@ -73,14 +79,6 @@ export class WeatherData extends React.Component {
                 <tr>
                   <td className="font-weight-lg">Humidity:</td>
                   <td>{weatherData.humidity}%</td>
-                </tr>
-                <tr>
-                  <td className="font-weight-lg">Sunrise:</td>
-                  <td>{weatherData.sunrise}</td>
-                </tr>
-                <tr>
-                  <td className="font-weight-lg">Sunset:</td>
-                  <td>{weatherData.sunset}</td>
                 </tr>
                 <tr>
                   <td className="font-weight-lg">Cloudiness:</td>
@@ -97,6 +95,14 @@ export class WeatherData extends React.Component {
                   <td>
                     <WindDirection weatherData={this.props.weatherData} />
                   </td>
+                </tr>
+                <tr>
+                  <td className="font-weight-lg">Sunrise:</td>
+                  <td>{weatherData.sunrise}</td>
+                </tr>
+                <tr>
+                  <td className="font-weight-lg">Sunset:</td>
+                  <td>{weatherData.sunset}</td>
                 </tr>
               </tbody>
             </table>
