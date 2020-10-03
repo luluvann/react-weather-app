@@ -1,0 +1,20 @@
+html, body
+{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: repeating-linear-gradient(160deg, rgba(132,217,223,1) 0%, rgba(90,143,207,1) 50%, rgba(132,217,223,1) 100%);
+  background-attachment: fixed;
+}
+
+
+body {
+    max-width: 42em;
+     margin: 0;
+    color: #84c3df;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    background: repeating-linear-gradient(160deg, rgba(132,217,223,1) 0%, rgba(90,143,207,1) 100%);
+    background-attachment: fixed;
+    
+  }

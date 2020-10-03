@@ -8,8 +8,6 @@ export class Footer extends React.Component{
         return (
             <div className="footer">
                 <div> Developed in React by <a href="https://github.com/luluvann/react-weather-app">Lulu</a></div>
-                <div>Credits: <a href="https://openweathermap.org/current">Open Weather Map API</a> and <a href="https://codepen.io/joshbader/pen/EjXgqr">J. Bader's CSS animations</a> based on <a href="https://dribbble.com/shots/2097042-Widget-Weather">Kylor's widgets</a></div>
-
             </div>
         )
     }

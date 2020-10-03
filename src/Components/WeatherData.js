@@ -45,9 +45,9 @@ export class WeatherData extends React.Component {
     return (
       <div>
         <div className="main-container">
-          <h1>
+          <h2 className="font-weight-lg">
             {weatherData.city}, {weatherData.country}
-          </h1>
+          </h2>
 
           <h6>Last updated: {weatherData.currentTime}</h6>
           <span><span onClick={this.handleClickToCelsius} className={this.state.celsius == true ? "activeTemp temp-clickable" : "temp-clickable"}>°C</span> <span>|</span> <span onClick={this.handleClickToFarenheit} className={this.state.celsius == false ? "activeTemp temp-clickable" : "temp-clickable"}>°F</span></span>
@@ -70,9 +70,6 @@ export class WeatherData extends React.Component {
           <div className="flex-container">
             <table>
               <tbody>
-                <tr>
-                  <th></th>
-                </tr>
                 <tr>
                   <td className="font-weight-lg">Humidity:</td>
                   <td>{weatherData.humidity}%</td>
