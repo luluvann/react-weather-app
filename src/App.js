@@ -26,7 +26,7 @@ class App extends React.Component {
   }
 
   startSearch(cityName) {
-    //let queryParams = new URLSearchParams(window.location.search)
+    //let params = new URLSearchParams(window.location.search)
     let params = (new URL(document.location)).searchParams
     // Set new or modify existing parameter value
     params.set("city", cityName);
