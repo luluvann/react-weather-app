@@ -7,6 +7,13 @@ I am very excited and happy to share my very first "Hello Weather" app using Rea
 
 You can find the live web app [here](https://luluvann.github.io/react-weather-app/website/) !
 
+## Main features
+
+* Convert temperature Celsius-Farenheit
+* Run the city weather search on key press (enter) (besides the search button in the search bar)
+* Bookmark the the url of favorite city(ies) in the web browser (dynamic url params)
+
+
 ## Run the app in the development mode
 
 In the project directory, you can run:
