@@ -11,7 +11,7 @@ You can find the live web app [here](https://luluvann.github.io/react-weather-ap
 
 * Convert temperature Celsius-Farenheit
 * Run the city weather search on key press (enter) (besides the search button in the search bar)
-* Bookmark the the url of favorite city(ies) in the web browser (dynamic url params)
+* Bookmark the url of favorite city(ies) in the web browser (dynamic url params)
 
 
 ## Run the app in the development mode
