@@ -1,7 +1,7 @@
 ## About
 
 As a developer-to-be and with basic knowledge of Python, HTML, CSS and Javascript, I decided to go on a 2-month journey this summer learning React library on Udemy, Codecademy and online tutorials.
-I am very excited and happy to share my very first "Hello Weather" app using React with an API, fetching city's current weather data (Open Weather Map). I am mostly using props components, state management and event handling. I can't wait to learn more and create more web apps with React! Have a nice weather ! ;)
+I am very excited and happy to share my very first "Hello Weather" app using React with an API, fetching city's current weather data (Open Weather Map). I am mostly using props components, React hook (useState) and event handling. I can't wait to learn more and create more web apps with React! Have a nice weather ! ;)
 
 ## Link to the app
 
